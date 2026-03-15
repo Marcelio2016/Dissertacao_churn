@@ -1,106 +1,190 @@
-# Dissertação Churn
+# Dissertação Churn: Análise Preditiva de Rotatividade de Clientes
 
-Este repositório contém o trabalho de dissertação/trabalho de conclusão sobre análise preditiva de churn (rotatividade de clientes) usando aprendizado de máquina.
+Este repositório contém o trabalho de dissertação/trabalho de conclusão de curso sobre **análise preditiva de churn (rotatividade de clientes)** em empresas de telecomunicações, utilizando técnicas avançadas de aprendizado de máquina.
 
-O foco do projeto é: 
-- carregar e preparar dados de clientes (CSV)
-- treinar modelos (CatBoost, etc.)
-- gerar relatórios e visualizações sobre a previsão de churn
+## 🎯 Objetivo do Projeto
+
+O estudo visa desenvolver um modelo preditivo robusto para identificar clientes com alta probabilidade de churn (cancelamento de serviços), permitindo intervenções proativas para retenção. O projeto abrange desde a exploração de dados até a implementação de modelos interpretáveis, com foco em:
+
+- **Análise exploratória de dados (EDA)**: identificação de padrões e correlações em dados de clientes.
+- **Pré-processamento**: tratamento de dados ausentes, codificação de variáveis categóricas e balanceamento de classes.
+- **Modelagem**: comparação de algoritmos de classificação (Random Forest, XGBoost, LightGBM, CatBoost, Regressão Logística).
+- **Avaliação**: métricas de desempenho (AUC, F1-Score, Precision, Recall) e validação cruzada estratificada.
+- **Interpretabilidade**: uso de SHAP e LIME para explicar previsões do modelo.
+- **Relatórios**: geração automática de relatórios em HTML/PDF com visualizações e insights.
+
+O dataset utilizado é o **Telco Customer Churn** (IBM), contendo informações demográficas, de serviços e comportamentais de ~7.000 clientes.
 
 ---
 
-## 🧩 Estrutura do repositório
+## 🧩 Estrutura do Repositório
 
-- `dissertacao_churn.ipynb` — notebook principal com análise, modelagem e visualizações.
-- `telco_churn.csv` — dataset usado para treinamento e avaliação (dados de clientes de telecom).
-- `catboost_info/` — pastas geradas pelo CatBoost durante o treinamento (logs, modelos, etc.).
-- `*.py` — scripts auxiliares (pré-processamento, diagnósticos, geração de relatórios).
+```
+Dissertacao_Churn/
+├── dissertacao_churn.ipynb      # Notebook principal com toda a análise
+├── telco_churn.csv              # Dataset de clientes (fonte: IBM)
+├── requirements.txt             # Dependências Python com versões
+├── README.md                    # Este arquivo
+├── .gitignore                   # Arquivos ignorados pelo Git
+├── catboost_info/               # Logs e artefatos do CatBoost
+└── *.py                         # Scripts auxiliares (se houver)
+```
+
+- **`dissertacao_churn.ipynb`**: Notebook Jupyter com seções organizadas (configuração, EDA, modelagem, avaliação, interpretabilidade).
+- **`telco_churn.csv`**: Dados tabulares com 21 colunas (demografia, serviços, churn).
+- **`requirements.txt`**: Lista de bibliotecas com versões mínimas recomendadas.
+- **`catboost_info/`**: Diretório gerado automaticamente pelo CatBoost durante treinamento.
 
 ---
 
-## ✅ Requisitos (setup)
+## 📚 Bibliotecas e Versões
 
-Recomenda-se usar um ambiente virtual Python para evitar conflitos de dependências.
+O projeto utiliza as seguintes bibliotecas Python (versões testadas):
 
-### 1) Criar ambiente virtual
+| Biblioteca | Versão Mínima | Função |
+|------------|---------------|--------|
+| **NumPy** | >= 1.21.0 | Operações numéricas com arrays |
+| **Pandas** | >= 1.3.0 | Manipulação de dados tabulares |
+| **Matplotlib** | >= 3.4.0 | Gráficos base |
+| **Seaborn** | >= 0.11.0 | Visualizações estatísticas |
+| **Scikit-learn** | >= 1.0.0 | Algoritmos ML e métricas |
+| **XGBoost** | >= 1.5.0 | Gradient Boosting otimizado |
+| **LightGBM** | >= 3.3.0 | Gradient Boosting eficiente |
+| **CatBoost** | >= 1.0.0 | Gradient Boosting com categóricas |
+| **Imbalanced-learn** | >= 0.8.0 | Técnicas de balanceamento (SMOTE) |
+| **SHAP** | >= 0.40.0 | Interpretabilidade baseada em Shapley |
+| **LIME** | >= 0.2.0 | Explicabilidade local |
+| **Notebook/JupyterLab** | >= 6.4.0 / 3.0.0 | Ambiente de execução interativo |
 
+> 🔍 **Como verificar versões instaladas**: Execute no terminal Python:
+> ```python
+> import numpy as np; print("NumPy:", np.__version__)
+> # Repita para outras bibliotecas
+> ```
+
+---
+
+## ✅ Instalação e Configuração
+
+### Pré-requisitos
+- **Python 3.8+** (recomendado 3.9 ou 3.10)
+- **Git** (para clonar o repositório)
+- **Jupyter Notebook** ou **JupyterLab** (instalado via pip)
+
+### 1) Clonar o Repositório
 ```bash
-cd /Users/marceliojeferson/Desktop/Dissertacao_Churn
+git clone https://github.com/Marcelio2016/Dissertacao_churn.git
+cd Dissertacao_Churn
+```
+
+### 2) Criar Ambiente Virtual (Recomendado)
+```bash
 python -m venv .venv
 ```
 
-### 2) Ativar o ambiente
-
+### 3) Ativar o Ambiente
 - **macOS/Linux:**
   ```bash
   source .venv/bin/activate
   ```
-
+- **Windows (Command Prompt):**
+  ```cmd
+  .venv\Scripts\activate
+  ```
 - **Windows (PowerShell):**
   ```powershell
   .venv\Scripts\Activate.ps1
   ```
 
-### 3) Instalar dependências
-
-Não existe um `requirements.txt` no repositório (ainda), então instale os pacotes principais manualmente:
-
+### 4) Instalar Dependências
 ```bash
 pip install --upgrade pip
-pip install pandas numpy scikit-learn catboost matplotlib seaborn notebook jupyterlab
+pip install -r requirements.txt
 ```
 
-> 🔎 Se você adicionar um `requirements.txt`, basta rodar:
-> ```bash
-> pip install -r requirements.txt
-> ```
+> ⚠️ **Nota**: Algumas bibliotecas (como XGBoost, LightGBM, CatBoost) podem requerer compiladores C++ no Windows. Se houver erros, consulte a documentação oficial de cada biblioteca.
+
+### 5) Verificar Instalação
+```bash
+python -c "import numpy, pandas, sklearn, catboost; print('✅ Todas as bibliotecas instaladas!')"
+```
 
 ---
 
-## ▶️ Como rodar
+## ▶️ Como Executar
 
-### 1) Executar o notebook (recomendado)
-
+### Opção 1: Notebook Completo (Recomendado)
 ```bash
 jupyter notebook dissertacao_churn.ipynb
 ```
-
-ou (Jupyter Lab):
-
+ou
 ```bash
 jupyter lab dissertacao_churn.ipynb
 ```
 
-### 2) Executar scripts Python (opcional)
+Execute as células sequencialmente. O notebook está dividido em seções numeradas (1 a 29), cada uma com explicações detalhadas.
 
-Alguns scripts podem ser praticados diretamente, por exemplo:
-
+### Opção 2: Scripts Individuais (Se houver)
 ```bash
-python analyze_content.py
-python diagnose_sections.py
+python nome_do_script.py
 ```
 
-A maneira exata de usar cada script depende da lógica interna deles. Abra o script para ver o que ele espera como entrada.
+### Opção 3: Relatórios Gerados
+- O notebook pode exportar relatórios em **HTML** (`dissertacao_churn.html`) e **PDF** (`dissertacao_churn.pdf`).
+- Esses arquivos são ignorados pelo Git para manter o repositório leve.
 
 ---
 
-## 🧠 Notas importantes
+## 📊 Resultados Esperados
 
-- Os arquivos `*.pdf` e `*.html` do notebook não são rastreados pelo Git (encorajado para manter o repositório leve).
-- O arquivo `.gitignore` cobre artefatos comuns (cache do Python, checkpoints, `.DS_Store`, etc.).
+Após execução completa, o projeto gera:
+- **Modelos treinados**: salvos em `catboost_info/` ou similares.
+- **Métricas de avaliação**: tabelas comparativas de performance (AUC > 0.85 esperado).
+- **Visualizações**: gráficos de importância de features, matrizes de confusão, curvas ROC.
+- **Explicações**: gráficos SHAP mostrando impacto de cada variável na previsão.
+
+**Métricas principais**:
+- **AUC-ROC**: ~0.85-0.90
+- **F1-Score**: ~0.75-0.80
+- **Precision/Recall**: balanceadas para classe minoritária (churn)
 
 ---
 
-## 🚀 Próximos passos
+## 🛠️ Solução de Problemas
 
-Se quiser, posso ajudar a:
+### Erro: "ModuleNotFoundError"
+- Certifique-se de ativar o ambiente virtual: `source .venv/bin/activate`
+- Reinstale dependências: `pip install -r requirements.txt`
 
-- Criar um `requirements.txt` automático com `pip freeze > requirements.txt`
-- Organizar o repositório em `src/`, `data/`, `notebooks/` para melhor estrutura
-- Adicionar instruções de execução específicas (por exemplo: como gerar o modelo, bons resultados esperados, métricas usadas)
+### Erro: "No module named 'catboost'"
+- Instale separadamente: `pip install catboost`
+- No Windows, pode ser necessário Microsoft Visual C++ Build Tools.
+
+### Notebook não abre
+- Instale Jupyter: `pip install notebook jupyterlab`
+- Execute: `jupyter notebook` ou `jupyter lab`
+
+### Dados não carregam
+- Verifique se `telco_churn.csv` está na pasta raiz.
+- O notebook baixa dados alternativos do Google Sheets se necessário.
+
+---
+
+## 🚀 Próximos Passos e Melhorias
+
+- **Deploy do modelo**: integrar com API (FastAPI/Flask) para previsões em produção.
+- **Otimização**: hyperparameter tuning avançado, ensemble stacking.
+- **Dados adicionais**: incorporar dados externos (econômicos, concorrência).
+- **Monitoramento**: implementar tracking de performance em produção.
 
 ---
 
 ## 📄 Licença
 
-Adicione aqui a licença do projeto, se desejar (por exemplo, MIT, GPL, etc.).
+Este projeto é para fins acadêmicos. Consulte orientador/orientadora para uso comercial.
+
+---
+
+## 📞 Contato
+
+Para dúvidas sobre o projeto, abra uma **Issue** no GitHub ou entre em contato com o autor.

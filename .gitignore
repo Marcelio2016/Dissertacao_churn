@@ -9,5 +9,5 @@ __pycache__/
 
 # Optional: ignore data exports/binaries you don't want in Git
 # *.csv
-# *.pdf
-# *.html
+*.pdf
+*.html

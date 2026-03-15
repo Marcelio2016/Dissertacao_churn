@@ -135,6 +135,7 @@ python nome_do_script.py
 
 ---
 
+<<<<<<< HEAD
 ## 📊 Resultados Esperados
 
 Após execução completa, o projeto gera:
@@ -188,3 +189,6 @@ Este projeto é para fins acadêmicos. Consulte orientador/orientadora para uso 
 ## 📞 Contato
 
 Para dúvidas sobre o projeto, abra uma **Issue** no GitHub ou entre em contato com o autor.
+=======
+
+>>>>>>> d7bb4e7635afda231de64cdbcef8575770295195

@@ -84,23 +84,4 @@ A maneira exata de usar cada script depende da lógica interna deles. Abra o scr
 
 ---
 
-## 🧠 Notas importantes
 
-- Os arquivos `*.pdf` e `*.html` do notebook não são rastreados pelo Git (encorajado para manter o repositório leve).
-- O arquivo `.gitignore` cobre artefatos comuns (cache do Python, checkpoints, `.DS_Store`, etc.).
-
----
-
-## 🚀 Próximos passos
-
-Se quiser, posso ajudar a:
-
-- Criar um `requirements.txt` automático com `pip freeze > requirements.txt`
-- Organizar o repositório em `src/`, `data/`, `notebooks/` para melhor estrutura
-- Adicionar instruções de execução específicas (por exemplo: como gerar o modelo, bons resultados esperados, métricas usadas)
-
----
-
-## 📄 Licença
-
-Adicione aqui a licença do projeto, se desejar (por exemplo, MIT, GPL, etc.).

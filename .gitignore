@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+
+# Optional: ignore data exports/binaries you don't want in Git
+# *.csv
+# *.pdf
+# *.html

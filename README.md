@@ -129,13 +129,7 @@ Execute as células sequencialmente. O notebook está dividido em seções numer
 python nome_do_script.py
 ```
 
-### Opção 3: Relatórios Gerados
-- O notebook pode exportar relatórios em **HTML** (`dissertacao_churn.html`) e **PDF** (`dissertacao_churn.pdf`).
-- Esses arquivos são ignorados pelo Git para manter o repositório leve.
 
----
-
-<<<<<<< HEAD
 ## 📊 Resultados Esperados
 
 Após execução completa, o projeto gera:
@@ -171,24 +165,3 @@ Após execução completa, o projeto gera:
 
 ---
 
-## 🚀 Próximos Passos e Melhorias
-
-- **Deploy do modelo**: integrar com API (FastAPI/Flask) para previsões em produção.
-- **Otimização**: hyperparameter tuning avançado, ensemble stacking.
-- **Dados adicionais**: incorporar dados externos (econômicos, concorrência).
-- **Monitoramento**: implementar tracking de performance em produção.
-
----
-
-## 📄 Licença
-
-Este projeto é para fins acadêmicos. Consulte orientador/orientadora para uso comercial.
-
----
-
-## 📞 Contato
-
-Para dúvidas sobre o projeto, abra uma **Issue** no GitHub ou entre em contato com o autor.
-=======
-
->>>>>>> d7bb4e7635afda231de64cdbcef8575770295195

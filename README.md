@@ -1,6 +1,8 @@
-# Dissertação Churn: Análise Preditiva de Rotatividade de Clientes
+# Dissertação 
+ALGORITMOS DE PREDIÇÃO DE CHURN: UMA ABORDAGEM COMPARATIVA
+COM MACHINE LEARNING NO SETOR DE TELECOMUNICAÇÕES
 
-Este repositório contém o trabalho de dissertação/trabalho de conclusão de curso sobre **análise preditiva de churn (rotatividade de clientes)** em empresas de telecomunicações, utilizando técnicas avançadas de aprendizado de máquina.
+Este repositório contém o trabalho de dissertação/trabalho de conclusão de mestrado sobre **análise preditiva de churn (rotatividade de clientes)** em empresas de telecomunicações, utilizando técnicas avançadas de aprendizado de máquina.
 
 ## 🎯 Objetivo do Projeto
 

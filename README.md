@@ -4,7 +4,7 @@ COM MACHINE LEARNING NO SETOR DE TELECOMUNICAÇÕES
 
 Este repositório contém o trabalho de dissertação/trabalho de conclusão de mestrado sobre **análise preditiva de churn (rotatividade de clientes)** em empresas de telecomunicações, utilizando técnicas avançadas de aprendizado de máquina.
 
-## 🎯 Objetivo do Projeto
+## Objetivo do Projeto
 
 O estudo visa desenvolver um modelo preditivo robusto para identificar clientes com alta probabilidade de churn (cancelamento de serviços), permitindo intervenções proativas para retenção. O projeto abrange desde a exploração de dados até a implementação de modelos interpretáveis, com foco em:
 
@@ -19,7 +19,7 @@ O dataset utilizado é o **Telco Customer Churn** (IBM), contendo informações 
 
 ---
 
-## 🧩 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```
 Dissertacao_Churn/
@@ -39,7 +39,7 @@ Dissertacao_Churn/
 
 ---
 
-## 📚 Bibliotecas e Versões
+## Bibliotecas e Versões
 
 O projeto utiliza as seguintes bibliotecas Python (versões testadas):
 
@@ -58,7 +58,7 @@ O projeto utiliza as seguintes bibliotecas Python (versões testadas):
 | **LIME** | >= 0.2.0 | Explicabilidade local |
 | **Notebook/JupyterLab** | >= 6.4.0 / 3.0.0 | Ambiente de execução interativo |
 
-> 🔍 **Como verificar versões instaladas**: Execute no terminal Python:
+> **Como verificar versões instaladas**: Execute no terminal Python:
 > ```python
 > import numpy as np; print("NumPy:", np.__version__)
 > # Repita para outras bibliotecas
@@ -66,7 +66,7 @@ O projeto utiliza as seguintes bibliotecas Python (versões testadas):
 
 ---
 
-## ✅ Instalação e Configuração
+## Instalação e Configuração
 
 ### Pré-requisitos
 - **Python 3.8+** (recomendado 3.9 ou 3.10)
@@ -104,7 +104,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-> ⚠️ **Nota**: Algumas bibliotecas (como XGBoost, LightGBM, CatBoost) podem requerer compiladores C++ no Windows. Se houver erros, consulte a documentação oficial de cada biblioteca.
+> **Nota**: Algumas bibliotecas (como XGBoost, LightGBM, CatBoost) podem requerer compiladores C++ no Windows. Se houver erros, consulte a documentação oficial de cada biblioteca.
 
 ### 5) Verificar Instalação
 ```bash
@@ -113,7 +113,7 @@ python -c "import numpy, pandas, sklearn, catboost; print('✅ Todas as bibliote
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 ### Opção 1: Notebook Completo (Recomendado)
 ```bash
@@ -132,7 +132,7 @@ python nome_do_script.py
 ```
 
 
-## 📊 Resultados Esperados
+## Resultados Esperados
 
 Após execução completa, o projeto gera:
 - **Modelos treinados**: salvos em `catboost_info/` ou similares.

@@ -75,7 +75,7 @@ O projeto utiliza as seguintes bibliotecas Python (versões testadas):
 
 ### 1) Clonar o Repositório
 ```bash
-git clone https://github.com/Marcelio2016/Dissertacao_churn.git
+git clone <link_do_repositorio_anonimo>.git
 cd Dissertacao_Churn
 ```
 

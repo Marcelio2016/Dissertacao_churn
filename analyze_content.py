@@ -1,7 +1,7 @@
 import json
 
 # Carrega e analisa detalhadamente
-with open('/Users/marceliojeferson/Desktop/Dissertacao_Churn/dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
+with open('dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
     nb = json.load(f)
 
 # Procura seções 21-25 e vê o REAL conteúdo do código

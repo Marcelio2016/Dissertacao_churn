@@ -1,7 +1,7 @@
 import json
 
 # Carrega e altera títulos
-with open('/Users/marceliojeferson/Desktop/Dissertacao_Churn/dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
+with open('dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
     nb = json.load(f)
 
 # Correções finais
@@ -33,7 +33,7 @@ for cell in nb['cells']:
 print(f"\n🔄 Total de títulos corrigidos: {modified}")
 
 # Salva alterações
-with open('/Users/marceliojeferson/Desktop/Dissertacao_Churn/dissertacao_churn.ipynb', 'w', encoding='utf-8') as f:
+with open('dissertacao_churn.ipynb', 'w', encoding='utf-8') as f:
     json.dump(nb, f, ensure_ascii=False, indent=1)
 
 print("✅ Notebook atualizado com sucesso!")

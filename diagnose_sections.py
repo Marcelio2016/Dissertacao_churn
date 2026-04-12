@@ -1,7 +1,7 @@
 import json
 
 # Carrega o notebook
-with open('/Users/marceliojeferson/Desktop/Dissertacao_Churn/dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
+with open('dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
     nb = json.load(f)
 
 # Procura por todas as seções a partir da seção 18

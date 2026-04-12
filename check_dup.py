@@ -1,6 +1,6 @@
 import json
 
-with open('/Users/marceliojeferson/Desktop/Dissertacao_Churn/dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
+with open('dissertacao_churn.ipynb', 'r', encoding='utf-8') as f:
     nb = json.load(f)
 
 # Procurar pelos índices das células com código radar

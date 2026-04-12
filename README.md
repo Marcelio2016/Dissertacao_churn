@@ -28,8 +28,6 @@ Dissertacao_Churn/
 ├── requirements.txt             # Dependências Python com versões
 ├── README.md                    # Este arquivo
 ├── .gitignore                   # Arquivos ignorados pelo Git
-├── catboost_info/               # Logs e artefatos do CatBoost
-└── *.py                         # Scripts auxiliares (se houver)
 ```
 
 - **`dissertacao_churn.ipynb`**: Notebook Jupyter com seções organizadas (configuração, EDA, modelagem, avaliação, interpretabilidade).
